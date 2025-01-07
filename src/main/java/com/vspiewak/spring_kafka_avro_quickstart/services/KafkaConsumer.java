@@ -14,9 +14,7 @@ public class KafkaConsumer {
 
     private static final Logger log = LoggerFactory.getLogger(KafkaConsumer.class);
 
-    @KafkaListener(
-            topics = "${spring.kafka.topics.customersTopic}"
-    )
+    @KafkaListener(topics = "${spring.kafka.topics.customersTopic}")
     public void consumeCustomer(
             @Header(KafkaHeaders.RECEIVED_PARTITION) int partition,
             @Header(KafkaHeaders.OFFSET) int offset,
