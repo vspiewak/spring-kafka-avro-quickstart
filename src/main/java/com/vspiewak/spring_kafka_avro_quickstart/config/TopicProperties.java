@@ -1,4 +1,4 @@
-package com.vspiewak.kstream_events_join.config;
+package com.vspiewak.spring_kafka_avro_quickstart.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

@@ -1,4 +1,4 @@
-package com.vspiewak.kstream_events_join.services;
+package com.vspiewak.spring_kafka_avro_quickstart.services;
 
 import com.vspiewak.avro.Customer;
 import org.slf4j.Logger;

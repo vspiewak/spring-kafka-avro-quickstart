@@ -1,7 +1,7 @@
-package com.vspiewak.kstream_events_join.init;
+package com.vspiewak.spring_kafka_avro_quickstart.init;
 
 import com.vspiewak.avro.Customer;
-import com.vspiewak.kstream_events_join.services.KafkaProducer;
+import com.vspiewak.spring_kafka_avro_quickstart.services.KafkaProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
