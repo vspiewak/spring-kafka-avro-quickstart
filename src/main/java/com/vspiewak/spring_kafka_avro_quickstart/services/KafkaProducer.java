@@ -15,10 +15,10 @@ public class KafkaProducer {
     @Autowired
     private KafkaTemplate<String, Customer> kafkaTemplate;
 
-    public void sendCustomer(String topicName, String key, Customer customer) {
+    public void sendCustomer(String topicName, Customer customer) {
 
         kafkaTemplate
-                .send(topicName, key, customer)
+                .send(topicName, customer.getCustomerId(), customer)
                 .whenComplete((_, ex) -> {
                     if (ex == null) {
                         log.info("customer sent to topic: {}", customer);

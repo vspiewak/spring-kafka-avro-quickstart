@@ -21,15 +21,14 @@ public class OnStartup {
     @EventListener(ApplicationReadyEvent.class)
     public void onStartup() {
 
-        kafkaProducer.sendCustomer(
-                customersTopic,
-                "customer-id-1",
-                Customer
-                        .newBuilder()
-                        .setFirstname("Vincent")
-                        .setLastname("Spiewak")
-                        .build()
-        );
+        var customer = Customer
+                .newBuilder()
+                .setCustomerId("customer-id-1")
+                .setFirstname("Vincent")
+                .setLastname("Spiewak")
+                .build();
+
+        kafkaProducer.sendCustomer(customersTopic, customer);
 
     }
 

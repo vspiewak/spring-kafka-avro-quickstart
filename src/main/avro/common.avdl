@@ -9,6 +9,7 @@ protocol MyAvroProtocol {
 
 	record Customer {
 		//Gender gender = "UNKNOWN";
+		string customerId;
 		string firstname;
 		string lastname;
 	}
