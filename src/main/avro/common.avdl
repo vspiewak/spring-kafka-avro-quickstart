@@ -1,0 +1,16 @@
+@namespace("com.vspiewak.avro")
+protocol MyAvroProtocol {
+
+	enum Gender {
+		MALE,
+		FEMALE,
+		UNKNOWN
+	}
+
+	record Customer {
+		//Gender gender = "UNKNOWN";
+		string firstname;
+		string lastname;
+	}
+
+}
