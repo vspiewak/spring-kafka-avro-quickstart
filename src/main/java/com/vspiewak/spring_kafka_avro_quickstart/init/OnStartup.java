@@ -3,7 +3,6 @@ package com.vspiewak.spring_kafka_avro_quickstart.init;
 import com.vspiewak.avro.Customer;
 import com.vspiewak.spring_kafka_avro_quickstart.services.KafkaProducer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -11,9 +10,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class OnStartup {
-
-    @Value("${spring.kafka.topics.customersTopic}")
-    String customersTopic;
 
     @Autowired
     private KafkaProducer kafkaProducer;
@@ -28,7 +24,7 @@ public class OnStartup {
                 .setLastname("Spiewak")
                 .build();
 
-        kafkaProducer.sendCustomer(customersTopic, customer);
+        kafkaProducer.sendCustomer(customer);
 
     }
 
